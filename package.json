@@ -1,0 +1,55 @@
+{
+  "name": "use-daynight",
+  "version": "0.0.0",
+  "description": "React hooks about whether it is now day or night with Geolocation Web API.",
+  "keywords": [
+    "geolocation",
+    "sunset",
+    "sunrise",
+    "hooks",
+    "daytime",
+    "nighttime"
+  ],
+  "main": "lib/index.js",
+  "module": "esm/index.js",
+  "types": "lib/index.d.ts",
+  "typings": "lib/index.d.ts",
+  "files": [
+    "lib/",
+    "esm/"
+  ],
+  "scripts": {
+    "build:cjs": "tsc -d",
+    "build:es": "tsc -d -m esNext --outDir esm",
+    "build": "yarn build:cjs && yarn build:es",
+    "storybook": "start-storybook -p 6008",
+    "storybook:build": "build-storybook",
+    "start": "yarn storybook",
+    "format": "prettier --write \"src/*.ts\"",
+    "lint": "tslint -p tsconfig.json"
+  },
+  "author": "Gabriel Koo",
+  "license": "MIT",
+  "devDependencies": {
+    "@storybook/addon-actions": "^6.1.14",
+    "@storybook/addon-console": "^1.2.2",
+    "@storybook/react": "^6.1.14",
+    "@types/moment-timezone": "^0.5.30",
+    "@types/storybook__react": "^5.2.1",
+    "@types/suncalc": "^1.8.0",
+    "prettier": "^2.2.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "tslint": "^6.1.3",
+    "tslint-config-prettier": "^1.18.0",
+    "typescript": "^4.1.3"
+  },
+  "dependencies": {
+    "react-hook-geolocation": "^1.0.7",
+    "suncalc": "^1.8.0"
+  },
+  "peerDependencies": {
+    "react": "^16.8.0 || ^17.0.0",
+    "react-dom": "^16.8.0 || ^17.0.0"
+  }
+}
